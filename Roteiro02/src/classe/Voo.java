@@ -12,7 +12,7 @@ public class Voo {
     private String destino;
     private double capacidadeMax;
     private List<Passageiro> listaDePassageiros;
-    private List<Aeroporto> listaEscalas;
+    private List<String> listaEscalas;
     private String estadoVoo;
 
     public Voo() {
@@ -100,13 +100,14 @@ public class Voo {
         return null;
     }
 
-    /*public void addEscalas(){
+    public void addEscalas(){
         
     }
     
     public void removerEscalas(){
         
-    }*/
+    }
+    
     public void alterarEstadoDoVoo(String novoEstado) {
         this.estadoVoo = novoEstado;
     }
