@@ -24,11 +24,12 @@ public class Voo {
         estadoVoo = "";
     }
 
-    public Voo(double idVoo, String destino, double capacidadeMax, String estadoVoo) {
+    public Voo(double idVoo, String destino, double capacidadeMax ) {
         this.idVoo = idVoo;
         this.destino = destino;
         this.capacidadeMax = capacidadeMax;
-        this.estadoVoo = estadoVoo;
+        listaDePassageiros = new ArrayList<>();
+        listaEscalas = new ArrayList<>();
     }
 
     //setter
@@ -83,8 +84,12 @@ public class Voo {
     }
 
     public void addPassageiro(String nome, String cpf) {
-        Passageiro _passageiro = new Passageiro(nome, cpf);
-        this.listaDePassageiros.add(_passageiro);
+        Passageiro passageiro = new Passageiro(nome, cpf);
+        this.listaDePassageiros.add(passageiro);
+    }
+    
+    public void addPassageiro(Passageiro passageiro) {
+        this.listaDePassageiros.add(passageiro);
     }
 
     public void removePassageiro(String nome) {
@@ -100,12 +105,12 @@ public class Voo {
         return null;
     }
 
-    public void addEscalas(){
-        
+    public void addEscalas(String escala){
+        listaEscalas.add(escala);
     }
     
-    public void removerEscalas(){
-        
+    public void removerEscalas(String escala){
+        listaEscalas.remove(escala);
     }
     
     public void alterarEstadoDoVoo(String novoEstado) {
@@ -114,5 +119,16 @@ public class Voo {
 
     public boolean estaAbaixoDaCapacidadeMin() {
         return this.listaDePassageiros.size() < 5;
+    }
+
+    @Override
+    public String toString() {
+        return "Voo{" + "ler=" + ler + ", idVoo=" + idVoo + ", destino=" + destino + ", capacidadeMax=" + capacidadeMax + ", listaDePassageiros=" + listaDePassageiros + ", listaEscalas=" + listaEscalas + ", estadoVoo=" + estadoVoo + '}';
+    }
+    
+    public void ImprimirPassageiros(){
+        for (Passageiro passageiro : listaDePassageiros) {
+            passageiro.toString();
+        }
     }
 }
