@@ -1,15 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package classe;
 
 import java.util.Objects;
 
-/**
- *
- * @author 15102938681
- */
+
 public class Passageiro {
 // nome, CPF (ou outro identificador único). 
     private String nome;

@@ -48,7 +48,7 @@ public class Voo {
         this.listaDePassageiros = listaDePassageiros;
     }
 
-    public void setListaEscalas(List<Aeroporto> listaEscalas) {
+    public void setListaEscalas(List<String> listaEscalas) {
         this.listaEscalas = listaEscalas;
     }
 
@@ -73,7 +73,7 @@ public class Voo {
         return listaDePassageiros;
     }
 
-    public List<Aeroporto> getListaEscalas() {
+    public List<String> getListaEscalas() {
         return listaEscalas;
     }
 
