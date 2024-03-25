@@ -81,6 +81,10 @@ public class Aeroporto {
         }
     }
     
+    public void iniciarVoo(int n){
+        listVoos.get(n).setEstadoVoo("Iniciar voo!!");
+    }
+    
    
 
     @Override
