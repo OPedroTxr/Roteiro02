@@ -13,8 +13,8 @@ public class main {
     public static void main(String[] args) {
         //Criação de lista de voo
         List<Voo> listaDeVoo = new ArrayList<>();
-        Voo voo1 = new Voo(0001, "Bahamas", 615);
-        Voo voo2 = new Voo(0002, "Orlando", 350);
+        Voo voo1 = new Voo("0001", "Bahamas", 615);
+        Voo voo2 = new Voo("0002", "Orlando", 350);
         listaDeVoo.add(voo1);
         listaDeVoo.add(voo2);
         
@@ -36,6 +36,14 @@ public class main {
         
         voo2.addPassageiro(pass6);
         
+        //adicionando pontos aos passageiros
+        pass1.setPontos(500);
+        pass2.setPontos(500);
+        pass3.setPontos(500);
+        pass4.setPontos(500);
+        pass5.setPontos(500);
+        pass6.setPontos(500);
+        
         //Adicionando Escalas ao voo
         voo1.addEscalas("Bogota");
         voo1.addEscalas("Miami");
@@ -49,7 +57,11 @@ public class main {
         aeroporto1.addVoo(voo2);
         
         //impressões:
-        System.out.println(pass1.toString());
+        System.out.println("\n- - - - - Informacoes do voo 1 - - - - -");
         System.out.println(voo1.toString());
+        
+        System.out.println("\n- - - - - Informacoes do voo 2 - - - - -");
+        System.out.println(voo2.toString());
+        
     }
 }

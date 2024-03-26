@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Voo {
 
     private Scanner ler = new Scanner(System.in);
-    private double idVoo;
+    private String idVoo;
     private String destino;
     private double capacidadeMax;
     private List<Passageiro> listaDePassageiros;
@@ -16,24 +16,25 @@ public class Voo {
     private String estadoVoo;
 
     public Voo() {
-        idVoo = 0;
-        destino = "";
-        capacidadeMax = 0;
-        listaDePassageiros = new ArrayList<>();
-        listaEscalas = new ArrayList<>();
-        estadoVoo = "";
+        this.idVoo = "";
+        this.destino = "";
+        this.capacidadeMax = 0;
+        this.listaDePassageiros = new ArrayList<>();
+        this.listaEscalas = new ArrayList<>();
+        this.estadoVoo = "Aguardando passageiros";
     }
 
-    public Voo(double idVoo, String destino, double capacidadeMax ) {
+    public Voo(String idVoo, String destino, double capacidadeMax ) {
         this.idVoo = idVoo;
         this.destino = destino;
         this.capacidadeMax = capacidadeMax;
-        listaDePassageiros = new ArrayList<>();
-        listaEscalas = new ArrayList<>();
+        this.listaDePassageiros = new ArrayList<>();
+        this.listaEscalas = new ArrayList<>();
+        this.estadoVoo = "Aguardando passageiros";
     }
 
     //setter
-    public void setIdVoo(double idVoo) {
+    public void setIdVoo(String idVoo) {
         this.idVoo = idVoo;
     }
 
@@ -58,7 +59,7 @@ public class Voo {
     }
 
     //getter
-    public double getIdVoo() {
+    public String getIdVoo() {
         return idVoo;
     }
 
@@ -123,7 +124,9 @@ public class Voo {
 
     @Override
     public String toString() {
-        return "Voo{ idVoo=" + idVoo + ", destino=" + destino + ", capacidadeMax=" + capacidadeMax + ", \nlistaDePassageiros=" + listaDePassageiros + ", \nlistaEscalas=" + listaEscalas + ", \nestadoVoo=" + estadoVoo + '}';
+        return "Voo{ idVoo: " + idVoo + ", destino: " + destino + ", capacidadeMax: " + capacidadeMax 
+                + ", \nlistaDePassageiros: " + listaDePassageiros + ", \nlistaEscalas: " + listaEscalas 
+                + ", \nestadoVoo: " + estadoVoo + '}';
     }
     
     public void ImprimirPassageiros(){

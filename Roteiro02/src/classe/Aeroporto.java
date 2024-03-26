@@ -9,7 +9,9 @@ public class Aeroporto {
     private String nome;
     private String localizacao;
     private List<Voo> listVoos ;
-
+    
+    
+    //contrutores
     public Aeroporto(String nome, String localizacao, List<Voo> listVoos) {
         this.nome = nome;
         this.localizacao = localizacao;
@@ -22,17 +24,18 @@ public class Aeroporto {
         this.listVoos = new ArrayList<>();
     }
     
+    //metodo de impressão
     public void imprimir(){
         System.out.println(this.toString());
     }
 
     @Override
     public String toString() {
-        return "Aeroporto{" + "nome=" + nome + ", localizacao=" + localizacao + ", listVoos=" + listVoos + '}';
+        return "Aeroporto {" + "nome: " + nome + ", localizacao: " + localizacao + ", listVoos: " + listVoos + '}';
     }
     
     
-
+    //getters & setters
     public String getNome() {
         return nome;
     }
@@ -58,6 +61,8 @@ public class Aeroporto {
         
     }
     
+    
+    //buscar voo
     public Voo findVoo(String destino){
          for (Voo voo: listVoos){
             if (voo.getDestino().equals(destino)) {
@@ -67,12 +72,14 @@ public class Aeroporto {
         return null;
     }
     
+    //verifica se há prejuízo
     public void verificPrejuizo(int n){
         if(listVoos.get(n).estaAbaixoDaCapacidadeMin()== true){
             System.out.println("Ha prejuizo.");
         }
     }
     
+    //define estado do voo como "Voando" como se estivesse em rota.
     public void iniciarVoo(int n){
         listVoos.get(n).setEstadoVoo("Voando!!");
     }
