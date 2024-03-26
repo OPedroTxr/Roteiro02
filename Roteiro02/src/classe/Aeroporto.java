@@ -76,6 +76,8 @@ public class Aeroporto {
     public void verificPrejuizo(int n){
         if(listVoos.get(n).estaAbaixoDaCapacidadeMin()== true){
             System.out.println("Ha prejuizo.");
+        }else{
+            System.out.println("Nao ha prejuizo.");
         }
     }
     
