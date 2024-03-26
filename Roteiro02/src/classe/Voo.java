@@ -123,7 +123,7 @@ public class Voo {
 
     @Override
     public String toString() {
-        return "Voo{" + "ler=" + ler + ", idVoo=" + idVoo + ", destino=" + destino + ", capacidadeMax=" + capacidadeMax + ", listaDePassageiros=" + listaDePassageiros + ", listaEscalas=" + listaEscalas + ", estadoVoo=" + estadoVoo + '}';
+        return "Voo{ idVoo=" + idVoo + ", destino=" + destino + ", capacidadeMax=" + capacidadeMax + ", \nlistaDePassageiros=" + listaDePassageiros + ", \nlistaEscalas=" + listaEscalas + ", \nestadoVoo=" + estadoVoo + '}';
     }
     
     public void ImprimirPassageiros(){

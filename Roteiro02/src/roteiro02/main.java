@@ -49,7 +49,7 @@ public class main {
         aeroporto1.addVoo(voo2);
         
         //impressões:
-        pass1.toString();
-        voo1.toString();
+        System.out.println(pass1.toString());
+        System.out.println(voo1.toString());
     }
 }
