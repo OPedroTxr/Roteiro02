@@ -41,7 +41,7 @@ public class main {
         pass4.setPontos(500);   //Bahamas
         pass5.setPontos(500);   //Bahamas
         
-        pass6.setPontos(600);   //Orlando 
+        pass6.setPontos(900);   //Orlando 
         
         //Adicionando Escalas ao voo
         voo1.addEscalas("Bogota");
@@ -67,6 +67,12 @@ public class main {
         
         System.out.print("O voo ha prejuizo: ");
         aeroporto1.verificPrejuizo(1);  //Verifica se há prejuízo no 2º voo do aeroporto.
+        
+        
+        //removendo pontos de um passageiro
+        System.out.print("\nAplicando desconto de pontos em passageiro:");
+        pass6.resgatarPontos(390);
+        pass6.imprimir();
         
     }
 }
