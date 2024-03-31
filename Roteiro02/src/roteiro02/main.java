@@ -19,12 +19,12 @@ public class main {
         listaDeVoo.add(voo2);
         
         //Adicionando passageiros e encaixando eles no voo
-        Passageiro pass1 = new Passageiro("José Rui", "314.256.132-53");
-        Passageiro pass2 = new Passageiro("Thomas Turbando", "322.145.235-45");
-        Passageiro pass3 = new Passageiro("Kleyton Nascimento", "612.412.642-57");
-        Passageiro pass4 = new Passageiro("Isadora Pinto", "690.320.436-76");
-        Passageiro pass5 = new Passageiro("Paula Tejando", "542.421.645-24");
-        Passageiro pass6 = new Passageiro("Sujiro Kimi Mame", "155.235.215-56");
+        Passageiro pass1 = new Passageiro("Jucemar Morais Inácio", "415.730.209-58");
+        Passageiro pass2 = new Passageiro("Ana Cristina Bastida Thomaz", "428.573.580-67");
+        Passageiro pass3 = new Passageiro("Carlos Henrique Tavares Pinto", "179.414.063-81");
+        Passageiro pass4 = new Passageiro("Deyse Falcão Correia", "610.991.838-55");
+        Passageiro pass5 = new Passageiro("Vanda Bragança Leandro", "338.518.304-90");
+        Passageiro pass6 = new Passageiro("Ezeni Silveira Figueiro", "231.418.451-31");
         
         voo1.addPassageiro(pass1);
         voo1.addPassageiro(pass2);

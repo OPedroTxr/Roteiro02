@@ -25,5 +25,4 @@ public class SistemaDeFidelidade {
             return true;
         }
     }
-    
 }

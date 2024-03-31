@@ -10,7 +10,7 @@ public class Voo {
     private Scanner ler = new Scanner(System.in);
     private String idVoo;
     private String destino;
-    private double capacidadeMax;
+    private int capacidadeMax;
     private List<Passageiro> listaDePassageiros;
     private List<String> listaEscalas;
     private String estadoVoo;
@@ -24,7 +24,7 @@ public class Voo {
         this.estadoVoo = "Aguardando passageiros";
     }
 
-    public Voo(String idVoo, String destino, double capacidadeMax ) {
+    public Voo(String idVoo, String destino, int capacidadeMax ) {
         this.idVoo = idVoo;
         this.destino = destino;
         this.capacidadeMax = capacidadeMax;
@@ -42,7 +42,7 @@ public class Voo {
         this.destino = destino;
     }
 
-    public void setCapacidadeMax(double capacidadeMax) {
+    public void setCapacidadeMax(int capacidadeMax) {
         this.capacidadeMax = capacidadeMax;
     }
 
@@ -67,7 +67,7 @@ public class Voo {
         return destino;
     }
 
-    public double getCapacidadeMax() {
+    public int getCapacidadeMax() {
         return capacidadeMax;
     }
 
@@ -125,7 +125,7 @@ public class Voo {
     @Override
     public String toString() {
         return "Voo{ idVoo: " + idVoo + ", destino: " + destino + ", capacidadeMax: " + capacidadeMax 
-                + ", \nlistaDePassageiros: " + listaDePassageiros + ", \nlistaEscalas: " + listaEscalas 
+                + " pessoas}\nlistaDePassageiros: " + listaDePassageiros + ", \nlistaEscalas: " + listaEscalas 
                 + ", \nestadoVoo: " + estadoVoo + '}';
     }
     
